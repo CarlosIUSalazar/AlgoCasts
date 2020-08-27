@@ -17,7 +17,29 @@ function reverse(str) {
     // return reverse;
 
     // SOLUTION 2
-    return str.split("").reverse().join("")
+    //return str.split("").reverse().join("")
+
+    // SOLUTION 3
+    // let reverse = [];
+    // for (let character of str) {
+    //     reverse.unshift(character)
+    // }
+    // return reverse.join("")
+
+    //SOLUTION 4
+    // let reverse = ''
+    // for (let character of str){
+    //     reverse = character + reverse;
+    // }
+    // return reverse;
+
+    //SOLUTION 5
+    // return str.split('').reduce((reversed,character) => {
+    //     return character + reversed;
+    // },'')
+
+    //SOLUTION 6
+    return str.split('').reduce((rev,char) => char + rev, '');
 }
 
 reverse('abcd')
